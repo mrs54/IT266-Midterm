@@ -1,0 +1,12 @@
+﻿Build started 10/7/2018 6:21:50 PM.
+     1>Project "C:\Users\mikey\Desktop\CompiledQuake4 - Copy\quake4\game.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(381,5): warning MSB8028: The intermediate directory (../Win32/Release\) contains files shared from another project (idLib.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W4 /WX- /Ox /Ob1 /Oi /Oy- /D NDEBUG /D _WINDOWS /D _FINAL /D GAME_DLL /D Q4SDK /D _WINDLL /D _MBCS /GF /Gm- /EHsc /MT /GS- /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /GR /Yu /Fp"../Win32/Release\Game/Game.pch" /Fo"../Win32/Release\Game/" /Fd"../Win32/Release\Gamex86.pdb" /Gd /TP /analyze- /errorReport:prompt game\gamesys\SaveGame.cpp
+         SaveGame.cpp
+     1>game\gamesys\SaveGame.cpp(2104): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include ""' to your source?
+     1>Done Building Project "C:\Users\mikey\Desktop\CompiledQuake4 - Copy\quake4\game.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.33
