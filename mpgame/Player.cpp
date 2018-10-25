@@ -9845,7 +9845,7 @@ void idPlayer::Killed( idEntity *inflictor, idEntity *attacker, int damage, cons
 		if ( !noDrop ) {
 			DropWeapon( );				// drop the weapon as an item 
 		}
-		delete weapon;
+		//delete weapon;
 	}
 
 	weapon = NULL;

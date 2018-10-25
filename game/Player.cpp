@@ -52,7 +52,7 @@ const int LADDER_RUNG_DISTANCE = 32;
 const int HEALTH_PER_DOSE = 10;
 
 // time before a weapon dropped to the floor disappears
-const int WEAPON_DROP_TIME = 20 * 1000;
+const int WEAPON_DROP_TIME = 90 * 1000;
 
 // time before a next or prev weapon switch happens
 const int	WEAPON_SWITCH_DELAY		= 150;
@@ -1827,7 +1827,8 @@ void idPlayer::Spawn( void ) {
 	physicsObj.SetClipMask( MASK_PLAYERSOLID );
 	SetPhysics( &physicsObj );
 	InitAASLocation();
-	
+	//here you would change the player's spawn
+	//ex player.poisonLevel = spawnArgs.GetFloat("PoisonLevel");
 	skin = renderEntity.customSkin;
 
 	// only the local player needs guis
@@ -1878,7 +1879,7 @@ void idPlayer::Spawn( void ) {
 		}
 
 		if ( !gameLocal.isMultiplayer ) {
-			objectiveSystem = uiManager->FindGui( spawnArgs.GetString( "wristcomm", "guis/wristcomm.gui" ), true, false, true );
+			objectiveSystem = uiManager->FindGui( spawnArgs.GetString( "wristcomm", "guis/NOSAVING.gui" ), true, false, true );
 			objectiveSystemOpen = false;
 #ifdef _XENON
 			g_ObjectiveSystemOpen = objectiveSystemOpen;
@@ -2081,7 +2082,8 @@ idPlayer::Save
 */
 void idPlayer::Save( idSaveGame *savefile ) const {
 	int i;
-
+	//Going to try to comment this stuff out as an attempt to do away with auto saves
+	/*
 	savefile->WriteUsercmd( usercmd );
 
 	playerView.Save( savefile );
@@ -2128,7 +2130,8 @@ void idPlayer::Save( idSaveGame *savefile ) const {
  	savefile->WriteInt( nextHealthPulse );
  	savefile->WriteInt( nextArmorPulse );
  	savefile->WriteBool( hiddenWeapon );
-
+	*/
+	//This is where Michael's commenting ends 
 //	savefile->WriteInt( spectator );						// Don't save MP stuff
 
 //	savefile->WriteBool( scoreBoardOpen );					// Don't save MP stuff
@@ -2153,6 +2156,9 @@ void idPlayer::Save( idSaveGame *savefile ) const {
 //	teleportEntity.Save( savefile );						// Don't save MP stuff
 // 	savefile->WriteInt( teleportKiller );					// Don't save MP stuff
 
+	//MICHAEL MORE COMMENTS BEGIN HERE
+
+	/*
 	savefile->WriteInt( minRespawnTime );
 	savefile->WriteInt( maxRespawnTime );
 
@@ -2323,7 +2329,8 @@ void idPlayer::Save( idSaveGame *savefile ) const {
 	savefile->WriteBool( objectivesEnabled );
 
 	savefile->WriteBool( flagCanFire );
-	
+	*/
+//MICHAEL COMMENTING ENDS HERE
 	// TOSAVE: const idDeclEntityDef*	cachedWeaponDefs [ MAX_WEAPONS ];	// cnicholson: Save these?
 	// TOSAVE: const idDeclEntityDef*	cachedPowerupDefs [ POWERUP_MAX ];
 
@@ -2340,10 +2347,12 @@ void idPlayer::Save( idSaveGame *savefile ) const {
 idPlayer::Restore
 ===========
 */
+// MICHAEL COMMENT RESTORE BEGINS HERE
+
 void idPlayer::Restore( idRestoreGame *savefile ) {
 	int	  i;
 	int   num;
-
+	/*
 	savefile->ReadUsercmd( usercmd );
 
 	playerView.Restore( savefile );
@@ -2401,7 +2410,8 @@ void idPlayer::Restore( idRestoreGame *savefile ) {
  	savefile->ReadInt( nextHealthPulse );
  	savefile->ReadInt( nextArmorPulse );
  	savefile->ReadBool( hiddenWeapon );
-
+	*/
+	//COMMENT END FOR NOW
 	assert( !spectator );								// Don't save MP stuff
 
 	assert( !scoreBoardOpen );							// Don't save MP stuff
