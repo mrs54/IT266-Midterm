@@ -1,5 +1,5 @@
 -----------------------------------
-     ROUGUE-LIKE QUAKE 4 MOD V 0.1
+  ROUGUE-LIKE QUAKE 4 MOD V 0.1
         By Michael Small
 -----------------------------------
 
@@ -12,9 +12,20 @@
 
 -Leveling system: Defeating enemies will increase the players level, and increase their maximum health pool
 
--Enemy leveling system: As the player defeats enemies, other enemies on the map will also level up and have an increased health pool. 
+-Enemy leveling system: As the player defeats enemies, other enemies on the map will also level up and have an increased health pool.
+
+-Movement speed increased
+
+-Crouching increases movement speed even further beyond
+
+-Base health increased to 200 HP
+
+-Flavor text added to the Main menu GUI and saving prompts
 
 -----------------------------------
-            OTHER		
+       PERSONAL DELIVERABLES	
 -----------------------------------
-
+-Random weapon drops on enemy death
+-Disable saving
+-Player leveling system
+-Enemy scaling system
