@@ -29,3 +29,5 @@
 -Disable saving
 -Player leveling system
 -Enemy scaling system
+
+Shortcut used to directly launch mod and skip opening cutscene: "C:\Program Files (x86)\Steam\steamapps\common\Quake 4\Quake4.exe" +disconnect +set fs_game dgen_mod 
